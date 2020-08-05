@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'app_state_notifier.dart';
+import 'package:flutter_dynamic_theme/theme_demo/app_state_notifier.dart';
 
 class ThemeDemo extends StatefulWidget {
   @override
@@ -18,9 +18,11 @@ class ThemeDemoState extends State<ThemeDemo> {
         leading: Icon(Icons.menu),
         actions: <Widget>[
           Switch(
-            value: Provider.of<AppStateNotifier>(context).isDarkModeOn,
+            value: Provider.of<AppStateNotifier>(context, listen: false)
+                .isDarkModeOn,
             onChanged: (boolVal) {
-              Provider.of<AppStateNotifier>(context).updateTheme(boolVal);
+              Provider.of<AppStateNotifier>(context, listen: false)
+                  .updateTheme(boolVal);
             },
           )
         ],
