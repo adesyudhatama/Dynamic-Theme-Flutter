@@ -5,34 +5,53 @@ class AppTheme {
   AppTheme._();
 
   static final ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.teal,
     appBarTheme: AppBarTheme(
-      color: Colors.teal,
+      color: Colors.pink,
       iconTheme: IconThemeData(
         color: Colors.white,
       ),
     ),
     cardTheme: CardTheme(
-      color: Colors.teal,
+      color: Colors.white,
     ),
     iconTheme: IconThemeData(
-      color: Colors.white54,
+      color: Colors.black54,
+    ),
+    textTheme: TextTheme(
+      headline6: TextStyle(
+        color: Colors.black,
+        fontSize: 20.0,
+      ),
+      subtitle2: TextStyle(
+        color: Colors.black45,
+        fontSize: 14.0,
+      ),
     ),
   );
 
   static final ThemeData darkTheme = ThemeData(
     scaffoldBackgroundColor: Colors.black,
     appBarTheme: AppBarTheme(
-      color: Colors.black,
+      color: Colors.white12,
       iconTheme: IconThemeData(
         color: Colors.white,
       ),
     ),
     cardTheme: CardTheme(
-      color: Colors.black,
+      color: Colors.white12,
     ),
     iconTheme: IconThemeData(
-      color: Colors.white54,
+      color: Colors.white70,
+    ),
+    textTheme: TextTheme(
+      headline6: TextStyle(
+        color: Colors.white,
+        fontSize: 20.0,
+      ),
+      subtitle2: TextStyle(
+        color: Colors.white70,
+        fontSize: 14.0,
+      ),
     ),
   );
 }

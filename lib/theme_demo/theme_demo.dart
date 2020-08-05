@@ -13,7 +13,6 @@ class ThemeDemoState extends State<ThemeDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
         title: Text('Flutter Themes'),
         leading: Icon(Icons.menu),
         actions: <Widget>[
@@ -29,16 +28,18 @@ class ThemeDemoState extends State<ThemeDemo> {
       ),
       body: Container(
         child: ListView.builder(
-          itemCount: 10,
+          itemCount: 15,
           itemBuilder: (context, pos) {
             return Card(
               elevation: 0,
               child: ListTile(
                 title: Text(
                   'Title $pos',
+                  style: Theme.of(context).textTheme.headline6,
                 ),
                 subtitle: Text(
                   'Subtitle $pos',
+                  style: Theme.of(context).textTheme.subtitle2,
                 ),
                 leading: Icon(
                   Icons.alarm,

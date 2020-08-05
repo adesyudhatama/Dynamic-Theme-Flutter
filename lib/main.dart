@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
     return Consumer<AppStateNotifier>(
       builder: (context, appState, child) {
         return MaterialApp(
-          title: 'Flutter Tutorials',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
+          //darkTheme: ThemeData.dark(),
           themeMode: appState.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
           home: ThemeDemo(),
         );
